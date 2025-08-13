@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flappy Bird</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <div id="game-container">
+
+        <canvas id="game-canvas"></canvas>
+
+        
+
+        <div id="game-controls" class="game-controls">
+
+            <button id="pause-btn" class="control-btn">⏸</button>
+
+            <button id="restart-game-btn" class="control-btn">↻</button>
+
+        </div>
+
+        
+
+        <div id="main-menu" class="menu">
+
+            <h1>Flappy Bird</h1>
+
+            <button id="play-btn" class="btn">Play</button>
+
+            <button id="settings-btn" class="btn">Settings</button>
+
+        </div>
+
+        
+
+        <div id="settings-menu" class="settings-menu">
+
+            <h2>Settings</h2>
+
+            <div class="settings-option">
+
+                <label>Sound Effects</label>
+
+                <div class="toggle-switch">
+
+                    <div id="sound-on" class="toggle-option active">On</div>
+
+                    <div id="sound-off" class="toggle-option">Off</div>
+
+                </div>
+
+            </div>
+
+            <div class="settings-option">
+
+                <label>Background Music</label>
+
+                <div class="toggle-switch">
+
+                    <div id="music-on" class="toggle-option active">On</div>
+
+                    <div id="music-off" class="toggle-option">Off</div>
+
+                </div>
+
+            </div>
+
+            <div class="settings-option">
+
+                <label for="theme-select">Theme</label>
+
+                <select id="theme-select">
+
+                    <option value="water">Water</option>
+
+                    <option value="desert">Desert</option>
+
+                    <option value="snow">Snow</option>
+
+                    <option value="night">Night</option>
+
+                </select>
+
+            </div>
+
+            <button id="close-settings" class="btn close-settings">Close</button>
+
+        </div>
+
+        
+
+        <div id="game-over" class="menu game-over">
+
+            <h1>Game Over</h1>
+
+            <div class="score-display">
+
+                <div>Score: <span id="final-score">0</span></div>
+
+                <div>High Score: <span id="high-score">0</span></div>
+
+            </div>
+
+            <button id="restart-btn" class="btn">Play Again</button>
+
+            <button id="menu-btn" class="btn">Main Menu</button>
+
+        </div>
+
+    </div>
+
+    <audio id="flap-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-bird-flapping-1486.mp3" preload="auto"></audio>
+
+    <audio id="score-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-achievement-bell-600.mp3" preload="auto"></audio>
+
+    <audio id="hit-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-arcade-game-explosion-2759.mp3" preload="auto"></audio>
+
+    <audio id="background-music" src="https://assets.mixkit.co/music/preview/mixkit-game-show-suspense-waiting-668.mp3" loop preload="auto"></audio>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
